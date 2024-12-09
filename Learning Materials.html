@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Materials - LIM CONNECT</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            color: black;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Landing Section */
+        .landing {
+            background: url('computer.jpg') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .landing h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .landing p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .landing button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .landing button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Semester Materials Section */
+        .materials {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .materials h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .materials .categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .materials .category {
+            background-color: #f8f9fa;
+            padding: 20px;
+            width: 250px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .materials .category:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .materials .category h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .materials .category a {
+            padding: 8px 15px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .materials .category a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #004d33;
+            color: white;
+            padding: 20px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LIM CONNECT</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="learning-materials.html">Learning Materials</a></li>
+                <li><a href="consultation.html">Consultation</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="landing">
+        <h1>Learning Materials</h1>
+        <p>Access all your semester resources in one place!</p>
+        <button>Explore Materials</button>
+    </section>
+
+    <section class="materials" id="materials">
+        <h2>Semester Resources</h2>
+        <div class="categories">
+            <div class="category">
+                <h3>Semester Notes</h3>
+                <a href="semester-notes.html">View</a>
+            </div>
+            <div class="category">
+                <h3>Semester Individual Assignments</h3>
+                <a href="semester-individual-assignments.html">View</a>
+            </div>
+            <div class="category">
+                <h3>Semester Projects</h3>
+                <a href="semester-projects.html">View</a>
+            </div>
+            <div class="category">
+                <h3>Semester Timetable</h3>
+                <a href="semester-timetable.html">View</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>29 Old Railway Line, Freetown, Sierra Leone</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: info@limconnect.com</li>
+                    <li>Phone: +232 30 821164</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="learning-materials.html">Learning Materials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 LIM CONNECT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
 
