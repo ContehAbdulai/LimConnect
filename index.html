@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LIM CONNECT</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            color: black;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Landing Section */
+        .landing {
+            background: url('lnding page.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .landing h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .landing p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .landing button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .landing button:hover {
+            background-color: #0056b3;
+        }
+
+        /* What We Do Section */
+        .what-we-do {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .what-we-do h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .what-we-do .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .what-we-do .service {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .what-we-do .service img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .what-we-do .service h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .what-we-do .service p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Contact Us Section */
+        .contact-us {
+            padding: 50px 20px;
+        }
+
+        .contact-us h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-us form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-us form input,
+        .contact-us form textarea,
+        .contact-us form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-us form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-us form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LIM CONNECT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Learning Material.html">Learning Materials</a></li>
+                <li><a href="Consultation.html">Consultation</a></li>
+                <li><a href="Grade checker login.html">Check Grades</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="landing" id="home">
+        <h1>Learning Made Easier</h1>
+        <p>Connect directly with the best learning resources and support tailored to your needs.</p>
+        <button>Explore Now</button>
+    </section>
+
+    <section class="what-we-do" id="materials">
+        <h2>What We Do</h2>
+        <div class="services">
+            <div class="service">
+                <img src="computer.jpg" alt="Learning Materials">
+                <h3>Learning Materials</h3>
+                <p>Access a variety of curated educational materials designed to enhance your learning experience.</p>
+            </div>
+            <div class="service">
+                <img src="consultation.jpg" alt="Consultation">
+                <h3>Consultation</h3>
+                <p>Schedule direct consultations with expert tutors to help you excel in your studies.</p>
+            </div>
+            <div class="service">
+                <img src="materials.jpg" alt="Library Access">
+                <h3>Library Access</h3>
+                <p>Gain access to a vast online library full of resources at your fingertips.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LIM CONNECT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

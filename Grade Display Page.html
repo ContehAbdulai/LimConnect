@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .grades-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .grades-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .grades-container h3 {
+            text-align: center;
+            color: #555;
+            margin-top: -10px;
+        }
+        .grades-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .grades-table th, .grades-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .grades-table th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        .grades-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .grades-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .gpa-info {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .gpa-info strong {
+            color: #007BFF;
+        }
+        .actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .actions button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .download-btn {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .download-btn:hover {
+            background-color: #218838;
+        }
+        .share-btn {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        .share-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grades-container">
+        <h2>Grades for [Student Name]</h2>
+        <h3>Lecturer: [Lecturer Name]</h3>
+        <table class="grades-table">
+            <thead>
+                <tr>
+                    <th>Module Code</th>
+                    <th>Module Name</th>
+                    <th>Grade</th>
+                    <th>Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>COM101</td>
+                    <td>Communication Skills</td>
+                    <td>A</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CIS102</td>
+                    <td>Creative & Innovative Skills</td>
+                    <td>B+</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>FRE103</td>
+                    <td>French Language</td>
+                    <td>A-</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>CSC104</td>
+                    <td>Computer Skills</td>
+                    <td>B</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>CIV105</td>
+                    <td>Civic Education</td>
+                    <td>A</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>MGT106</td>
+                    <td>Introduction to Management</td>
+                    <td>B+</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="gpa-info">
+            <p><strong>GPA:</strong> 3.75</p>
+            <p><strong>CGPA:</strong> 3.68</p>
+        </div>
+        <div class="actions">
+            <button class="download-btn" onclick="downloadTranscript()">Download Transcript</button>
+            <button class="share-btn" onclick="shareViaEmail()">Share via Email</button>
+            <button class="share-btn" onclick="shareViaWhatsApp()">Share via WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to download the transcript
+        function downloadTranscript() {
+            const link = document.createElement('a');
+            link.href = 'transcript.pdf'; // Replace with the actual transcript file URL
+            link.download = 'Transcript.pdf';
+            link.click();
+        }
+
+        // Function to share grades via email
+        function shareViaEmail() {
+            const subject = "My Grades";
+            const body = "Hello,\n\nHere are my grades:\n\n" +
+                         "Communication Skills: A\n" +
+                         "Creative & Innovative Skills: B+\n" +
+                         "French Language: A-\n" +
+                         "Computer Skills: B\n" +
+                         "Civic Education: A\n" +
+                         "Introduction to Management: B+\n\n" +
+                         "GPA: 3.75\nCGPA: 3.68\n";
+            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        // Function to share grades via WhatsApp
+        function shareViaWhatsApp() {
+            const text = "Here are my grades:\n\n" +
+                         "Communication Skills: A\n" +
+                         "Creative & Innovative Skills: B+\n" +
+                         "French Language: A-\n" +
+                         "Computer Skills: B\n" +
+                         "Civic Education: A\n" +
+                         "Introduction to Management: B+\n\n" +
+                         "GPA: 3.75\nCGPA: 3.68\n";
+            const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

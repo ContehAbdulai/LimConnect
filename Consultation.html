@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation - LIM CONNECT</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            color: black;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Landing Section */
+        .landing {
+            background: url('consultation.jpg') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .landing h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .landing p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .landing button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .landing button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .section .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .section .content form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section .content form input,
+        .section .content form select,
+        .section .content form textarea,
+        .section .content form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .section .content form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .section .content form button:hover {
+            background-color: #0056b3;
+        }
+
+        .section .meeting {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .section .meeting a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #28a745;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .section .meeting a:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #004d33;
+            color: white;
+            padding: 20px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LIM CONNECT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Learning Material.html">Learning Materials</a></li>
+                <li><a href="Consultation.html">Consultation</a></li>
+                <li><a href="Library.html">Library</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="landing">
+        <h1>Consultation</h1>
+        <p>Connect with your lecturers and peers for enhanced learning experiences.</p>
+        <button>Start Now</button>
+    </section>
+
+    <section class="section" id="schedule-consultation">
+        <h2>Schedule Consultation</h2>
+        <div class="content">
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Lecturer Name" required>
+                <select required>
+                    <option value="" disabled selected>Select Faculty</option>
+                    <option value="FICT">FICT</option>
+                    <option value="FBMG">FBMG</option>
+                    <option value="FCMB">FCMB</option>
+                    <option value="FDI">FDI</option>
+                </select>
+                <input type="text" placeholder="Program" required>
+                <input type="text" placeholder="Semester" required>
+                <input type="date" required>
+                <textarea rows="5" placeholder="Reason for Consultation"></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section" id="submit-assignment">
+        <h2>Submit Assignment Draft</h2>
+        <div class="content">
+            <form action="#" enctype="multipart/form-data">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="file" required>
+                <textarea rows="5" placeholder="Comments or Instructions"></textarea>
+                <button type="submit">Upload Draft</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section" id="online-meetings">
+        <h2>Join Online Meetings</h2>
+        <div class="meeting">
+            <p>Collaborate with your peers through Zoom sessions.</p>
+            <a href="https://zoom.us/" target="_blank">Join Zoom Meeting</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>29 Old Railway Line, Freetown, Sierra Leone</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: info@limconnect.com</li>
+                    <li>Phone: +232 30 821164</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="consultation.html">Consultation</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 LIM CONNECT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
