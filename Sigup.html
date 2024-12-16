@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - LIM CONNECT</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-link {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- University Logo -->
+        <div class="logo">
+            <img src="LUCT Logo.png" alt="University Logo">
+        </div>
+
+        <!-- Signup Title -->
+        <h1>Signup to LIM CONNECT</h1>
+
+        <!-- Signup Form -->
+        <form action="signup-process.php" method="POST">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="text" name="id_number" placeholder="ID Number" required>
+            <select name="program" required>
+                <option value="" disabled selected>Select Program</option>
+                <option value="Business Management">Business Management</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Design & Innovation">Design & Innovation</option>
+                <option value="Media & Broadcasting">Media & Broadcasting</option>
+            </select>
+            <select name="semester" required>
+                <option value="" disabled selected>Select Semester</option>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 3">Semester 3</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 5">Semester 5</option>
+                <option value="Semester 6">Semester 6</option>
+                <option value="Semester 7">Semester 7</option>
+                <option value="Semester 8">Semester 8</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <!-- Login Link -->
+        <p class="login-link">
+            Already an existing user? <a href="login.html">Login</a>
+        </p>
+    </div>
+</body>
+</html>

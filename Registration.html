@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - LIM CONNECT</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: red;
+            text-align: left;
+        }
+
+        .note strong {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- University Logo -->
+        <div class="logo">
+            <img src="LUCT Logo.png" alt="University Logo">
+        </div>
+
+        <!-- Registration Title -->
+        <h1>Semester Registration</h1>
+
+        <!-- Registration Form -->
+        <form action="registration-process.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="id" placeholder="ID Number" required>
+            <select name="faculty" required>
+                <option value="" disabled selected>Select Faculty</option>
+                <option value="Business Management">Business Management</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Media & Broadcasting">Media & Broadcasting</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Design & Innovation">Design & Innovation</option>
+            </select>
+            <select name="previous_semester" required>
+                <option value="" disabled selected>Select Previous Semester</option>
+                <option value="Semester 1">Semester 1</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 3">Semester 3</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 5">Semester 5</option>
+                <option value="Semester 6">Semester 6</option>
+                <option value="Semester 7">Semester 7</option>
+            </select>
+            <select name="proceeding_semester" required>
+                <option value="" disabled selected>Select Proceeding Semester</option>
+                <option value="Semester 2">Semester 2</option>
+                <option value="Semester 3">Semester 3</option>
+                <option value="Semester 4">Semester 4</option>
+                <option value="Semester 5">Semester 5</option>
+                <option value="Semester 6">Semester 6</option>
+                <option value="Semester 7">Semester 7</option>
+                <option value="Semester 8">Semester 8</option>
+            </select>
+            <input type="text" name="bank_slip" placeholder="Payment Bank Slip Number" required>
+            <input type="file" name="transcript" accept=".pdf" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Note -->
+        <p class="note">
+            <strong>Note:</strong> If you have any pending grades or fees, you will not be able to register for the proceeding semester.
+        </p>
+    </div>
+</body>
+</html>
