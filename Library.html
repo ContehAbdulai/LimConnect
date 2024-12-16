@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - LIM CONNECT</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            color: black;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        /* Landing Section */
+        .landing {
+            background: url('Background.avif') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .landing h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .landing p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .landing button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .landing button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .section .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .section .item {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section .item h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .section .item p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .section .item button {
+            display: inline-block;
+            padding: 8px 15px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .section .item button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #004d33;
+            color: white;
+            padding: 20px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-section ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LIM CONNECT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Learning Material.html">Learning Materials</a></li>
+                <li><a href="Consultation.html">Consultation</a></li>
+                <li><a href="Grade checker login.html">Check Grades</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Signup.html">Signup</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="landing">
+        <h1>Library</h1>
+        <p>Explore books, articles, journals, and tutorials for each faculty.</p>
+    </section>
+
+    <!-- Faculty Sections -->
+    <section class="section" id="fbmg">
+        <h2>Faculty of Business Management & Globalization (FBMG)</h2>
+        <div class="content">
+            <div class="item">
+                <h3>Book: Principles of Management</h3>
+                <p>An essential guide to effective business management practices.</p>
+                <button onclick="window.location.href='book-fbmg.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Article: Global Market Trends</h3>
+                <p>Insights into the latest trends in the global market.</p>
+                <button onclick="window.location.href='article-fbmg.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Journal: Business Analytics</h3>
+                <p>Discover how data shapes the business world.</p>
+                <button onclick="window.location.href='journal-fbmg.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Tutorial: How to Manage Teams</h3>
+                <p>Step-by-step guidance on managing effective teams.</p>
+                <button onclick="window.location.href='tutorial-fbmg.html'">View</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repeat similar structure for other faculties -->
+    <section class="section" id="fict">
+        <h2>Faculty of Information Communication & Technology (FICT)</h2>
+        <div class="content">
+            <div class="item">
+                <h3>Book: Programming in Python</h3>
+                <p>A comprehensive guide to learning Python programming.</p>
+                <button onclick="window.location.href='book-fict.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Article: AI in Modern Technology</h3>
+                <p>Explore the impact of artificial intelligence in various fields.</p>
+                <button onclick="window.location.href='article-fict.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Journal: Cybersecurity Innovations</h3>
+                <p>Learn about the latest developments in cybersecurity.</p>
+                <button onclick="window.location.href='journal-fict.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Tutorial: Introduction to Networking</h3>
+                <p>Understand the basics of networking and protocols.</p>
+                <button onclick="window.location.href='tutorial-fict.html'">View</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continue for other faculties -->
+    <section class="section" id="fcmb">
+        <h2>Faculty of Communication, Media & Broadcasting (FCMB)</h2>
+        <div class="content">
+            <div class="item">
+                <h3>Book: Media and Society</h3>
+                <p>A deep dive into the role of media in modern society.</p>
+                <button onclick="window.location.href='book-fcmb.html'">View</button>
+            </div>
+            <div class="item">
+                <h3>Article: Effective Communication</h3>
+                <p>Learn how to communicate effectively in various contexts.</
+                    <button onclick="window.location.href='article-fcmb.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Journal: Journalism Trends</h3>
+                    <p>Explore emerging trends in the field of journalism.</p>
+                    <button onclick="window.location.href='journal-fcmb.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Tutorial: Basics of Video Editing</h3>
+                    <p>Learn the basics of video editing with hands-on tutorials.</p>
+                    <button onclick="window.location.href='tutorial-fcmb.html'">View</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section" id="fabe">
+            <h2>Faculty of Architecture & Built Environment (FABE)</h2>
+            <div class="content">
+                <div class="item">
+                    <h3>Book: Modern Architecture</h3>
+                    <p>An introduction to contemporary architectural designs.</p>
+                    <button onclick="window.location.href='book-fabe.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Article: Sustainable Design</h3>
+                    <p>Explore sustainable practices in architecture.</p>
+                    <button onclick="window.location.href='article-fabe.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Journal: Urban Planning</h3>
+                    <p>Insights into effective urban development strategies.</p>
+                    <button onclick="window.location.href='journal-fabe.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Tutorial: Architectural Drawing Basics</h3>
+                    <p>Learn the fundamentals of architectural drawing.</p>
+                    <button onclick="window.location.href='tutorial-fabe.html'">View</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section" id="fdi">
+            <h2>Faculty of Design & Innovation (FDI)</h2>
+            <div class="content">
+                <div class="item">
+                    <h3>Book: Principles of Design</h3>
+                    <p>An essential guide to mastering the principles of design.</p>
+                    <button onclick="window.location.href='book-fdi.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Article: Innovation in Creative Arts</h3>
+                    <p>Explore the role of innovation in design and the arts.</p>
+                    <button onclick="window.location.href='article-fdi.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Journal: Product Design Trends</h3>
+                    <p>Discover the latest trends in product and industrial design.</p>
+                    <button onclick="window.location.href='journal-fdi.html'">View</button>
+                </div>
+                <div class="item">
+                    <h3>Tutorial: Sketching for Beginners</h3>
+                    <p>Step-by-step tutorial on improving your sketching skills.</p>
+                    <button onclick="window.location.href='tutorial-fdi.html'">View</button>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <p>29 Old Railway Line, Freetown, Sierra Leone</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: info@limconnect.com</li>
+                        <li>Phone: +232 30 821164</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="library.html">Library</a></li>
+                        <li><a href="consultation.html">Consultation</a></li>
+                        <li><a href="check-grades.html">Check Grades</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; 2024 LIM CONNECT. All Rights Reserved.</p>
+        </footer>
+    </body>
+    </html>    
